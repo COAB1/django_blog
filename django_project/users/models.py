@@ -9,6 +9,9 @@ class Profile(models.Model):
   def __str__(self):
     return f'{self.user.username} Profile'
 
+  """ 
+  The function bellow is to resize and save images using pillow library. 
+  We commented the code because there is some steps to use this with aws s3, so we are not using it for the moment
   def save(self, *args, **kwargs):
     super().save(*args, **kwargs) # override save method of a model
 
@@ -18,4 +21,4 @@ class Profile(models.Model):
       output_size = (300, 300)
       img.thumbnail(output_size)
       img.save(self.image.path)
-
+ """
